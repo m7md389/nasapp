@@ -4,15 +4,17 @@ import Like from "./Like";
 import "./../styles/media-card.css";
 import "./../styles/like.css";
 
-function MediaCard({
-  title,
-  explanation,
-  media,
-  mediaType,
-  isSaved,
-  reloadFavourites,
-  isHome
-}) {
+function MediaCard(props) {
+  const {
+    title,
+    explanation,
+    media,
+    mediaType,
+    isSaved,
+    reloadFavourites,
+    isHome
+  } = props;
+
   return (
     <div className="media-card">
       <h1>{title}</h1>

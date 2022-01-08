@@ -1,7 +1,9 @@
 import React from "react";
 import Nasapp from "../models/NasappModel";
 
-function Like({ isSaved, title, media, reloadFavourites }) {
+function Like(props) {
+  const { isSaved, title, media, reloadFavourites } = props;
+
   const handleLike = async function () {
     if (isSaved) {
       await Nasapp.deleteAstronomyPicture(title);

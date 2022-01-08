@@ -4,7 +4,8 @@ import SearchBar from "./SearchBar";
 import "./../models/NasappModel";
 import "./../styles/search.css";
 import SearchResaults from "./SearchResaults";
-function Search({ isSavedAstronomyPicture, reloadFavourites }) {
+
+function Search(props) {
   const NASA_API_URL = "https://images-api.nasa.gov/search?q=";
 
   let [searchResaults, setSearchResaults] = useState([]);

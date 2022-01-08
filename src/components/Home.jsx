@@ -1,7 +1,9 @@
 import React from "react";
 import MediaCard from "./MediaCard";
 import "./../styles/home.css";
-function Home({ APOD }) {
+function Home(props) {
+  const { APOD } = props;
+
   return (
     <div className="home">
       <MediaCard

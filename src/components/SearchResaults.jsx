@@ -1,11 +1,9 @@
 import React from "react";
 import MediaCard from "./MediaCard";
 
-function SearchResaults({
-  searchResaults,
-  isSavedAstronomyPicture,
-  reloadFavourites
-}) {
+function SearchResaults({}) {
+  const { searchResaults, isSavedAstronomyPicture, reloadFavourites } = props;
+
   return searchResaults.map((data) => {
     return (
       <MediaCard

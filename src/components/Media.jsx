@@ -1,7 +1,9 @@
 import React, { Fragment } from "react";
 import ReactPlayer from "react-player";
 
-function Media({ media, mediaType }) {
+function Media(props) {
+  const { media, mediaType } = props;
+
   return (
     <Fragment>
       {mediaType === "video" ? (
