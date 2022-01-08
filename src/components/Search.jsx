@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import axios from "axios";
+import NasaModel from "./../models/NasaModel";
 import SearchBar from "./SearchBar";
-import "./../models/NasappModel";
-import "./../styles/search.css";
 import SearchResaults from "./SearchResaults";
+import "./../styles/search.css";
 
 function Search(props) {
-  const NASA_API_URL = "https://images-api.nasa.gov/search?q=";
+  const { isSavedAstronomyPicture, reloadFavourites } = props;
 
   let [searchResaults, setSearchResaults] = useState([]);
   let [searchValue, setSearchValue] = useState("");
@@ -19,8 +18,8 @@ function Search(props) {
 
   const handleSearch = async function () {
     if (!searchValue.replace(/ /g, "")) return null;
-    const apiResault = await axios.get(NASA_API_URL + searchValue);
-    setSearchResaults(apiResault.data.collection.items);
+    const apiResault = await NasaModel.getImageAndVideo(searchValue);
+    setSearchResaults(apiResault);
     setSearchContnet(searchValue);
     setSearchValue("");
   };

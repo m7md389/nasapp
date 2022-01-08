@@ -1,7 +1,9 @@
 import React from "react";
 import "./../styles/search-bar.css";
 
-function SearchBar({ searchValue, onChange, onSearch }) {
+function SearchBar(props) {
+  const { searchValue, onChange, onSearch } = props;
+
   const handleKeyPress = function (event) {
     const keyCode = event.code;
     if (keyCode === "Enter") {
