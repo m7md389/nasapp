@@ -1,6 +1,5 @@
 import React from "react";
 import Nasapp from "../models/NasappModel";
-import "./../styles/like.css";
 
 function Like({ isSaved, title, media, reloadFavourites }) {
   const handleLike = async function () {

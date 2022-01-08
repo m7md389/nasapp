@@ -13,6 +13,12 @@ import Home from "./components/Home";
 import Favourites from "./components/Favourites";
 import Search from "./components/Search";
 
+/*
+  - Keep deleted images rendered
+  - Snackbars
+  - Fix Search Route
+*/
+
 function App() {
   let [AstronomyPictureOfTheDay, setAstronomyPictureOfTheDay] = useState({});
   let [favourites, setFavourites] = useState([]);

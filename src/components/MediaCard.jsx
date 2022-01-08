@@ -2,6 +2,7 @@ import React from "react";
 import Media from "./Media";
 import Like from "./Like";
 import "./../styles/media-card.css";
+import "./../styles/like.css";
 
 function MediaCard({
   title,
