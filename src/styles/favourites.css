@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
+
+.favourites > h1 {
+  font-family: "Merienda", cursive;
+  text-align: center;
+  color: aquamarine;
+  font-size: 52px;
+  padding-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .favourites > h1 {
+    font-size: 32px;
+  }
+}

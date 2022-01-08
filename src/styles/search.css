@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
+
+.search > h2 {
+  width: 90%;
+  font-family: "Merienda", cursive;
+  text-align: center;
+  color: aquamarine;
+}
+
+.search > h2 > span {
+  color: red;
+}
