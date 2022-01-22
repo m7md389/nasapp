@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -40,41 +40,40 @@ function App() {
 
   useEffect(() => {
     reloadAPOD();
+    reloadFavourites();
   }, []);
 
   return (
-    <Fragment>
-      <Router>
-        <NavBar />
-        <Switch>
-          <Route
-            path="/favourites"
-            render={() => (
-              <Favourites
-                favourites={favourites}
-                reloadFavourites={reloadFavourites}
-              />
-            )}
-          />
-          <Route
-            path="/search"
-            render={() => (
-              <Search
-                isSavedAstronomyPicture={isSavedAstronomyPicture}
-                reloadFavourites={reloadFavourites}
-              />
-            )}
-          />
-          <Route path="/404" render={() => <PageNotFound />} />
-          <Route
-            exact
-            path="/"
-            render={() => <Home APOD={AstronomyPictureOfTheDay} />}
-          />
-          <Redirect to="404"></Redirect>
-        </Switch>
-      </Router>
-    </Fragment>
+    <Router>
+      <NavBar />
+      <Switch>
+        <Route
+          path="/favourites"
+          render={() => (
+            <Favourites
+              favourites={favourites}
+              reloadFavourites={reloadFavourites}
+            />
+          )}
+        />
+        <Route
+          path="/search"
+          render={() => (
+            <Search
+              isSavedAstronomyPicture={isSavedAstronomyPicture}
+              reloadFavourites={reloadFavourites}
+            />
+          )}
+        />
+        <Route path="/404" render={() => <PageNotFound />} />
+        <Route
+          exact
+          path="/"
+          render={() => <Home APOD={AstronomyPictureOfTheDay} />}
+        />
+        <Redirect to="404"></Redirect>
+      </Switch>
+    </Router>
   );
 }
 

@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import MediaCard from "./MediaCard";
 import "./../styles/favourites.css";
 
 function Favourites(props) {
   const { favourites, reloadFavourites } = props;
-
-  useEffect(reloadFavourites, []);
 
   return (
     <div className="favourites">
